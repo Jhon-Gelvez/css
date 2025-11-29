@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3: Menú con Selectores Combinados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .menu-navegacion {
+            list-style: none;
+            padding: 0;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            width: 300px;
+        }
+
+        .menu-navegacion a {
+            color: #007bff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+
+        .menu-navegacion > li {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu-navegacion > li.con-submenu {
+            background-color: #e9e9e9;
+        }
+
+        .menu-navegacion > li.con-submenu + ul {
+            background-color: #d1e7ff;
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .menu-navegacion > li.primer-item ~ li {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .menu-navegacion + p {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ffc107;
+            background-color: #fff3cd;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu-navegacion">
+        <li class="primer-item">
+            <a href="#">Inicio</a>
+        </li>
+        <li>
+            <a href="#">Productos</a>
+        </li>
+        <li class="con-submenu">
+            <a href="#">Servicios</a>
+        </li>
+        <ul>
+            <li><a href="#">Consultoría</a></li>
+            <li><a href="#">Desarrollo</a></li>
+        </ul>
+        <li>
+            <a href="#">Contacto</a>
+        </li>
+    </ul>
+
+    <p>Este párrafo es adyacente al menú de navegación.</p>
+</body>
+</html>

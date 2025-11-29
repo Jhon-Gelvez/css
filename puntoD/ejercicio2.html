@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2: Modelo de Caja y Box-Sizing</title>
+    <style>
+        * {
+            box-sizing: border-box; 
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        #contenedor-principal {
+            width: 80%;
+            max-width: 1000px;
+            margin: 30px auto; 
+            padding: 20px; 
+            border: 2px solid #333;
+            background-color: #fff;
+        }
+
+        .seccion-flex {
+            display: flex; 
+            padding: 15px 0; 
+            margin-top: 20px;
+            border-top: 1px dashed #ccc;
+        }
+
+        .caja-flex {
+            flex-grow: 1; 
+            padding: 15px; 
+            margin: 0 10px;
+            border: 1px solid #007bff;
+            background-color: #e7f3ff;
+        }
+
+        .seccion-inline-block {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dashed #ccc;
+            text-align: center;
+        }
+
+        .elemento-inline-block {
+            display: inline-block; 
+            width: 150px;
+            height: 80px;
+            margin: 10px; 
+            border: 3px double #28a745;
+            line-height: 80px;
+            text-align: center;
+            background-color: #e2ffe7;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor-principal">
+        <h2>Implementación del Modelo de Caja</h2>
+
+        <p>Este párrafo es un elemento **block**. Ocupa el 100% del ancho disponible y respeta el **padding** y **margin** aplicados a `#contenedor-principal`.</p>
+
+        <h3>1. Contenedores con Display Flex</h3>
+        <div class="seccion-flex">
+            <div class="caja-flex">Caja Flex 1</div>
+            <div class="caja-flex">Caja Flex 2</div>
+            <div class="caja-flex">Caja Flex 3</div>
+        </div>
+
+        <h3>2. Elementos con Display Inline-Block</h3>
+        <div class="seccion-inline-block">
+            <div class="elemento-inline-block">Inline-Block A</div>
+            <div class="elemento-inline-block">Inline-Block B</div>
+            <div class="elemento-inline-block">Inline-Block C</div>
+        </div>
+    </div>
+</body>
+</html>

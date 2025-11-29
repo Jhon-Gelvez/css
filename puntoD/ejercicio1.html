@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Selectores</title>
+    <style>
+        div p {
+            color: blue;
+        }
+
+        section > p {
+            font-weight: bold;
+        }
+
+        h2 + p {
+            text-decoration: underline;
+        }
+
+        h2 ~ p {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Párrafo dentro de div.</p>
+        <section>
+            <p>Párrafo dentro de section.</p>
+        </section>
+    </div>
+    <h2>Título</h2>
+    <p>Párrafo hermano adyacente.</p>
+    <p>Párrafo hermano general1.</p>
+    <p>Párrafo hermano general2.</p>
+</body>
+</html>
