@@ -1,0 +1,61 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    padding: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+/* Contenedor principal de la tarjeta */
+.profile-card {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+/* Contenedor adyacente para demostrar Hermano Adyacente/General */
+.contenido-adyacente {
+    padding: 20px;
+    border: 1px dashed #cccccc;
+    background-color: #e0e0e0;
+    flex-grow: 1;
+}
+
+/* 1. Selector de Descendencia (Espacio) */
+/* Estilo base para TODOS los párrafos dentro de la tarjeta */
+.profile-card p {
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* 2. Selector Hijo Directo (>) */
+/* Estilo para los elementos inmediatamente después de .profile-header */
+.profile-card .profile-header > h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5em;
+}
+
+/* 3. Selector Hermano Adyacente (+) */
+/* Estiliza la DIV que sigue INMEDIATAMENTE al H2 (que es la descripción breve) */
+.profile-card h2 + .profile-description {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+/* 4. Selector Hermano General (~) */
+/* Estiliza TODOS los párrafos que sigan al elemento .contact-info */
+.profile-card .contact-info ~ p {
+    font-style: italic;
+    color: #999;
+    margin-top: 15px;
+}
+
+/* Selector para elemento adyacente al H1 (Título fuera de la tarjeta) */
+h1 + .profile-card {
+    border: 3px solid #ff5722; /* Ejemplo de borde de énfasis */
+}
